@@ -68,8 +68,8 @@ export default function Footer() {
                   className="mr-3 text-slate-400 group-hover:text-blue-400 transition-colors duration-300"
                   size={20}
                 />
-                <a href="mailto:john.doe@example.com" className="hover:text-blue-300 transition-colors duration-300">
-                  john.doe@example.com
+                <a href="mailto:m.johnevans3@gmail.com" className="hover:text-blue-300 transition-colors duration-300">
+                m.johnevans3@gmail.com
                 </a>
               </motion.div>
 
@@ -78,8 +78,8 @@ export default function Footer() {
                   className="mr-3 text-slate-400 group-hover:text-blue-400 transition-colors duration-300"
                   size={20}
                 />
-                <a href="tel:+1234567890" className="hover:text-blue-300 transition-colors duration-300">
-                  +1 (234) 567-890
+                <a href="tel:+447873609837" className="hover:text-blue-300 transition-colors duration-300">
+                  +44 7873609837
                 </a>
               </motion.div>
 
@@ -96,7 +96,7 @@ export default function Footer() {
               <h4 className="text-lg font-medium mb-3">Connect With Me</h4>
               <div className="flex space-x-4">
                 <motion.a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/mehmet-john-evans/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-slate-400 hover:text-blue-400 transition-colors duration-300"
@@ -106,7 +106,7 @@ export default function Footer() {
                   <Linkedin size={24} />
                 </motion.a>
                 <motion.a
-                  href="https://github.com"
+                  href="https://github.com/MJEvans3"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-slate-400 hover:text-white transition-colors duration-300"
@@ -116,14 +116,45 @@ export default function Footer() {
                   <Github size={24} />
                 </motion.a>
                 <motion.a
-                  href="https://twitter.com"
+                  href="https://www.instagram.com/mehmetjohnevans/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate-400 hover:text-blue-400 transition-colors duration-300"
-                  aria-label="Twitter Profile"
+                  className="text-slate-400 hover:text-pink-500 transition-colors duration-300"
+                  aria-label="Instagram Profile"
                   whileHover={{ y: -5, scale: 1.2, transition: { duration: 0.2 } }}
                 >
-                  <Twitter size={24} />
+                  <svg
+                    width={24}
+                    height={24}
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      x="2"
+                      y="2"
+                      width="20"
+                      height="20"
+                      rx="5"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      fill="none"
+                    />
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="5"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      fill="none"
+                    />
+                    <circle
+                      cx="17"
+                      cy="7"
+                      r="1.2"
+                      fill="currentColor"
+                    />
+                  </svg>
                 </motion.a>
               </div>
             </div>

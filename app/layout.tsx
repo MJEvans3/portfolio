@@ -20,8 +20,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={inter.className}>
-        {/* BackgroundPaths background */}
-        <div style={{ position: 'fixed', inset: 0, zIndex: 0, pointerEvents: 'none', width: '100vw', height: '100vh' }}>
+        {/* Fixed background with paths */}
+        <div className="fixed inset-0 w-full h-full z-0 pointer-events-none" style={{ backgroundColor: 'rgb(220, 220, 220)' }}>
           <BackgroundPaths />
         </div>
         {/* Main content above background */}

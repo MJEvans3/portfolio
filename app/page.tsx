@@ -137,12 +137,16 @@ export default function Home() {
       </section>
       
       {/* Work Experience Section - No gap, directly after gallery */}
-      <section id="work" className="pt-12 pb-16 bg-slate-50/40 backdrop-blur-sm relative z-10">
-        <div className="container px-4 md:px-6">
-          <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-blue-600">
-            Work Experience
-          </h2>
-          <WorkExperience />
+      <section id="work" className="pt-12 pb-16 relative z-10">
+        <div className="relative mx-auto">
+          {/* Blurred background with margins */}
+          <div className="absolute left-[5%] right-[5%] -top-10 -bottom-8 bg-slate-50/30 backdrop-blur-sm -z-10 rounded-lg"></div>
+          <div className="container px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-blue-600">
+              Work Experience
+            </h2>
+            <WorkExperience />
+          </div>
         </div>
       </section>
       {/* Education & Certifications Section */}
@@ -155,12 +159,16 @@ export default function Home() {
         </div>
       </section>
       {/* Projects Section - This is where the background transition starts */}
-      <section id="projects" className="py-16 bg-slate-50/60 backdrop-blur-sm relative z-10">
-        <div className="container px-4 md:px-6">
-          <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-blue-600">
-            Projects
-          </h2>
-          <Projects />
+      <section id="projects" className="py-16 relative z-10">
+        <div className="relative mx-auto">
+          {/* Blurred background with margins - slightly longer for projects section */}
+          <div className="absolute inset-y-0 left-[1%] right-[1%] -top-10 -bottom-8 bg-slate-50/30 backdrop-blur-sm -z-10 rounded-lg"></div>
+          <div className="container px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-blue-600">
+              Projects
+            </h2>
+            <Projects />
+          </div>
         </div>
       </section>
       {/* My Story Section - Background gradually darkens through this section */}

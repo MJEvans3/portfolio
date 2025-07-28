@@ -44,9 +44,9 @@ export default function Navbar() {
 
   const sectionOffsets: Record<string, number> = {
     home: 0,
-    work: 45,
+    work: 32,
     education: 45,
-    projects: 45,
+    projects:28,
     story: 45,
     contact: 45,
   }
@@ -89,7 +89,7 @@ export default function Navbar() {
               MJE
             </button>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/mehmet-john-evans/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate-600 hover:text-blue-600 transition-colors duration-300 transform hover:scale-110"

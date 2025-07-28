@@ -84,7 +84,7 @@ function TimelineItemComponent({ item, index }: TimelineItemComponentProps) {
             {item.description}
           </p>
           {item.image && (
-            <div className="relative h-48 w-full rounded-md overflow-hidden">
+            <div className={`relative w-full rounded-md overflow-hidden ${index === 1 || index === 2 ? 'h-72' : 'h-48'}`}>
               <Image
                 src={item.image || "/placeholder.svg"}
                 alt={item.title}
@@ -109,8 +109,8 @@ export default function MyStory() {
     {
       year: "2022",
       title: "From Istanbul to Queen Mary",
-      description: "After graduating as Valedictorian with a 98.8% GPA from Tarabya British Schools in Istanbul, I made the bold decision to move to London alone to pursue Computer Science at Queen Mary University. Leaving behind 13 years in Turkiye, I embraced the challenge of starting fresh in a new country, determined to build my future at the intersection of technology and finance.",
-      image: "/images/my-story/londonskyline.jpeg",
+      description: "After graduating as Valedictorian with a 98.8% GPA from Tarabya British Schools in Istanbul, I made the bold decision to move to London alone to pursue Computer Science at Queen Mary University. Leaving behind 13 years in Turkiye, I embraced the challenge of starting fresh, determined to build my future at the intersection of technology and finance.",
+      image: "/images/my-story/IMG_8032.jpg",
       align: "left",
     },
     {
@@ -124,7 +124,7 @@ export default function MyStory() {
       year: "2023",
       title: "From Side Hustle to Business Experience",
       description: "What started as weekend tutoring sessions grew into a thriving business. By my second year, I was teaching 30+ hours per week during peak seasons, helping over 90 students achieve their academic goals with a 50%+ A* rate. This success allowed me to leave Nando's and take on a part-time Data Analyst role at BFT Consult, where I automated bid analysis processes and maintained their web presence.",
-      image: "",
+      image: "/images/my-story/tutor-recs1.jpg",
       align: "left",
     },
     {
@@ -132,7 +132,7 @@ export default function MyStory() {
       title: "Joining Tech Giants",
       description:
         "Landing a 12-month placement at IBM Technology Global Sales was a pivotal moment. As a Platform AI Engineer, I built 8 AI-powered MVPs for major financial clients, achieving a 55% conversion rate. From designing RAG pipelines for fintech investment teams to delivering live demos at Barclays and NatWest, I discovered my passion for applying AI to solve real financial challenges. IBM became my classroom for enterprise-scale innovation.",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "/images/my-story/IMG_3986.jpeg",
       align: "right",
     },
     {
@@ -140,23 +140,23 @@ export default function MyStory() {
       title: "Selected for Wimbledon's Elite Team",
       description:
         "Being chosen from IBM's entire intern cohort to join the prestigious Wimbledon Project Team was surreal. For two weeks, I worked alongside tennis legends, delivering real-time data-driven insights to coaches, players, and global media. From umpire tablet setups to AI-powered content generation, I experienced firsthand how cutting-edge technology enhances the world's most prestigious sporting events.",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "/images/my-story/IMG_6529.jpeg",
       align: "left",
     },
     {
       year: "2025",
       title: "Data Analytics at Scale",
       description:
-        "Before I entered my final year, TikTok offered me the opportunity to dive into live commerce analytics as a Growth Analyst. Analysing seller KPIs and developing livestream content strategies taught me how data drives user engagement at unprecedented scale. This role perfectly bridges my technical skills with commercial insight, preparing me for the dynamic world of fintech.",
+        "Before entering my final year, TikTok offered me the opportunity to dive into live commerce analytics as a Growth Analyst. Analysing seller KPIs and developing livestream content strategies taught me how data drives user engagement at unprecedented scale. This role perfectly bridges my technical skills with commercial insight, preparing me for the dynamic world of fintech.",
       image: "/images/my-story/IMG_4782.jpeg",
       align: "right",
     },
     {
       year: "What's Next?",
-      title: "Ready for Quantitative Finance",
+      title: "Graduate / Entry Level Roles",
       description:
-        "With graduation approaching in 2026, I'm actively pursuing Graduate opportunities in quantitative finance and fintech. Armed with real-world experience from IBM, Wimbledon, and TikTok, plus deep technical expertise in financial modeling and AI, I'm ready to contribute to the next generation of financial technology. The intersection of data, technology, and capital markets isn't just my career goal. It's my calling.",
-      image: "/placeholder.svg?height=400&width=400",
+        "With graduation approaching in 2026, I'm actively pursuing Graduate opportunities in investment banking, quantitative finance and fintech. Armed with real-world experience from IBM, Wimbledon, and TikTok, plus deep technical expertise in financial modeling and AI, I'm ready to contribute to the next generation of financial technology. The intersection of data, technology, and capital markets isn't just my career goal. It's my calling.",
+      image: "/images/my-story/londonskyline.jpeg",
       align: "left",
     },
   ]
