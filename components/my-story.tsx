@@ -110,7 +110,7 @@ export default function MyStory() {
       year: "2022",
       title: "From Istanbul to Queen Mary",
       description: "After graduating as Valedictorian with a 98.8% GPA from Tarabya British Schools in Istanbul, I made the bold decision to move to London alone to pursue Computer Science at Queen Mary University. Leaving behind 13 years in Turkiye, I embraced the challenge of starting fresh, determined to build my future at the intersection of technology and finance.",
-      image: "/images/my-story/IMG_8032.jpg",
+      image: "/images/my-story/IMG_8032.jpeg",
       align: "left",
     },
     {
@@ -124,7 +124,7 @@ export default function MyStory() {
       year: "2023",
       title: "From Side Hustle to Business Experience",
       description: "What started as weekend tutoring sessions grew into a thriving business. By my second year, I was teaching 30+ hours per week during peak seasons, helping over 90 students achieve their academic goals with a 50%+ A* rate. This success allowed me to leave Nando's and take on a part-time Data Analyst role at BFT Consult, where I automated bid analysis processes and maintained their web presence.",
-      image: "/images/my-story/tutor-recs1.jpg",
+      image: "/images/my-story/tutor-recs1.jpeg",
       align: "left",
     },
     {
@@ -156,7 +156,7 @@ export default function MyStory() {
       title: "Graduate / Entry Level Roles",
       description:
         "With graduation approaching in 2026, I'm actively pursuing Graduate opportunities in investment banking, quantitative finance and fintech. Armed with real-world experience from IBM, Wimbledon, and TikTok, plus deep technical expertise in financial modeling and AI, I'm ready to contribute to the next generation of financial technology. The intersection of data, technology, and capital markets isn't just my career goal. It's my calling.",
-      image: "/images/my-story/londonskyline.jpeg",
+      image: "/images/my-story/IMG_8988.jpeg",
       align: "left",
     },
   ]

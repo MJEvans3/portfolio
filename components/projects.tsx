@@ -22,27 +22,27 @@ export default function Projects() {
       title: "Algorithmic Trading Backtest Dashboard",
       description:
       "Full stack backtesting platform for quantitative trading implementing nine algorithmic strategies I created with python, risk metrics calculation, and performance analytics including Sharpe ratios, drawdown analysis, and portfolio optimisation.",
-      video: "/images/projectvids/Sequence01.mp4",
+      video: "/images/projectvids/Sequence01.mov",
       tags: ["Financial Risk Metrics", "Python",  "Next.js","Statistical Modelling", "React"],
-      liveUrl: "/images/projectvids/Sequence01.mp4",
+      liveUrl: "/images/projectvids/Sequence01.mov",
       githubUrl: "https://github.com/MJEvans3/BacktestApp",
     },
     {
       title: "Black-Scholes Option Pricer with P&L",
       description:
       "Full stack advanced derivatives pricing model implementing Black-Scholes framework with Greeks calculation, implied volatility analysis, risk surface visualisation, and profit-loss scenario modeling for options trading with AI chat feature.",
-      video: "/images/projectvids/Sequence02.mp4",
+      video: "/images/projectvids/Sequence02.mov",
       tags: ["Options Pricing", "Risk Management","NumPy","Financial Mathematics", "Plotly", "Streamlit"],
-      liveUrl: "/images/projectvids/Sequence02.mp4",
+      liveUrl: "/images/projectvids/Sequence02.mov",
       githubUrl: "https://github.com/MJEvans3/Black-Scholes-Option-Pricer",
     },
     {
       title: "Tennis Match Prediction ML System",
       description:
       "Machine learning tournament predictor using ELO rating systems, feature engineering, and ensemble methods to forecast match outcomes through Monte Carlo simulations and probabilistic modelling frameworks based on large amounts of past tennis matches.",
-      video: "/images/projectvids/Sequence03.mp4",
+      video: "/images/projectvids/Sequence03.mov",
       tags: ["Machine Learning", "Feature Engineering", "XGBoost", "Random Forest", "Predictive Modelling"],
-      liveUrl: "/images/projectvids/Sequence03.mp4",
+      liveUrl: "/images/projectvids/Sequence03.mov",
       githubUrl: "https://github.com/MJEvans3/WimbledonMLPredictor",
     },
   ]

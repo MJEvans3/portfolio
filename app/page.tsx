@@ -88,24 +88,24 @@ export default function Home() {
         <div className="w-3/5 h-full pr-8 flex items-start pt-8 ml-6">
           <Masonry
             items={[
-              { id: "1", img: "/images/masonry/7ce213c8-ba4b-40ec-873f-ef4c485aa32a.JPG", url: "#1", height: 400 },
-              { id: "2", img: "/images/masonry/aws-me-and-thomas.png", url: "#2", height: 300 },
+              { id: "1", img: "/images/masonry/7ce213c8-ba4b-40ec-873f-ef4c485aa32a.jpeg", url: "#1", height: 400 },
+              { id: "2", img: "/images/masonry/aws-me-and-thomas.jpeg", url: "#2", height: 300 },
               { id: "3", img: "/images/masonry/8631819D-494C-4621-9E6F-8BA9A019874A.jpeg", url: "#3", height: 500 },
               { id: "4", img: "/images/masonry/screenshot2.jpeg", url: "#4", height: 235 },
               { id: "5", img: "/images/masonry/IMG_6518.jpeg", url: "#5", height: 350 },
               { id: "6", img: "/images/masonry/exported_E5670672-8A5D-4928-8978-70285197B61B.jpeg", url: "#6", height: 350},
               { id: "7", img: "/images/masonry/FullSizeRender.jpeg", url: "#7", height: 450 },
-              { id: "8", img: "/images/masonry/IMG_0187.JPG", url: "#8", height: 350 },
-              { id: "9", img: "/images/masonry/IMG_8149.jpg", url: "#9", height: 285 },
-              { id: "10", img: "/images/masonry/IMG_3708.jpg", url: "#10", height: 460 },
-              { id: "11", img: "/images/masonry/FNSTRXPO1.jpg", url: "#11", height: 400 },
-              { id: "12", img: "/images/masonry/IMG_1058.jpg", url: "#12", height: 250 },
-              { id: "13", img: "/images/masonry/IMG_8972.jpg", url: "#13", height: 400 },
-              { id: "14", img: "/images/masonry/IMG_9530.JPG", url: "#14", height: 502 },
+              { id: "8", img: "/images/masonry/IMG_0187.jpeg", url: "#8", height: 350 },
+              { id: "9", img: "/images/masonry/IMG_8149.jpeg", url: "#9", height: 285 },
+              { id: "10", img: "/images/masonry/IMG_3708.jpeg", url: "#10", height: 460 },
+              { id: "11", img: "/images/masonry/FNSTRXPO1.jpeg", url: "#11", height: 400 },
+              { id: "12", img: "/images/masonry/IMG_1058.jpeg", url: "#12", height: 250 },
+              { id: "13", img: "/images/masonry/IMG_8972.jpeg", url: "#13", height: 400 },
+              { id: "14", img: "/images/masonry/IMG_9530.jpeg", url: "#14", height: 502 },
               { id: "15", img: "/images/masonry/Screenshot1.jpeg", url: "#15", height: 220 },
-              { id: "16", img: "/images/masonry/Volunteers-Group-Picture-2.JPG", url: "#16", height: 350 },
-              { id: "17", img: "/images/masonry/DSC00039.JPG", url: "#17", height: 300 },
-              { id: "18", img: "/images/masonry/CE-talent-show-rubiks.JPG", url: "#18", height: 240},
+              { id: "16", img: "/images/masonry/Volunteers-Group-Picture-2.jpeg", url: "#16", height: 350 },
+              { id: "17", img: "/images/masonry/DSC00039.jpeg", url: "#17", height: 300 },
+              { id: "18", img: "/images/masonry/CE-talent-show-rubiks.jpeg", url: "#18", height: 240},
             ]}
             ease="power3.out"
             duration={0.6}
