@@ -4,11 +4,13 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
 import { ExternalLink, Github } from "lucide-react"
+import { useRef } from "react"
 
 interface Project {
   title: string
   description: string
-  image: string
+  image?: string
+  video?: string
   tags: string[]
   liveUrl?: string
   githubUrl?: string
@@ -17,33 +19,59 @@ interface Project {
 export default function Projects() {
   const projects: Project[] = [
     {
-      title: "Portfolio Website",
+      title: "Algorithmic Trading Backtest Dashboard",
       description:
-        "A modern, responsive portfolio website built with Next.js and Tailwind CSS. Features smooth scrolling, animations, and a clean design.",
-      image: "/placeholder.svg?height=600&width=800",
-      tags: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
-      liveUrl: "#",
-      githubUrl: "#",
+      "Full stack backtesting platform for quantitative trading implementing nine algorithmic strategies I created with python, risk metrics calculation, and performance analytics including Sharpe ratios, drawdown analysis, and portfolio optimisation.",
+      video: "/images/projectvids/Sequence01.mp4",
+      tags: ["Financial Risk Metrics", "Python",  "Next.js","Statistical Modelling", "React"],
+      liveUrl: "/images/projectvids/Sequence01.mp4",
+      githubUrl: "https://github.com/MJEvans3/BacktestApp",
     },
     {
-      title: "E-Commerce Platform",
+      title: "Black-Scholes Option Pricer with P&L",
       description:
-        "A full-featured e-commerce platform with product listings, shopping cart, user authentication, and payment processing.",
-      image: "/placeholder.svg?height=600&width=800",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
-      liveUrl: "#",
-      githubUrl: "#",
+      "Full stack advanced derivatives pricing model implementing Black-Scholes framework with Greeks calculation, implied volatility analysis, risk surface visualisation, and profit-loss scenario modeling for options trading with AI chat feature.",
+      video: "/images/projectvids/Sequence02.mp4",
+      tags: ["Options Pricing", "Risk Management","NumPy","Financial Mathematics", "Plotly", "Streamlit"],
+      liveUrl: "/images/projectvids/Sequence02.mp4",
+      githubUrl: "https://github.com/MJEvans3/Black-Scholes-Option-Pricer",
     },
     {
-      title: "AI Content Generator",
+      title: "Tennis Match Prediction ML System",
       description:
-        "An AI-powered application that generates content based on user prompts. Utilizes natural language processing to create unique text.",
-      image: "/placeholder.svg?height=600&width=800",
-      tags: ["Python", "TensorFlow", "React", "Flask"],
-      liveUrl: "#",
-      githubUrl: "#",
+      "Machine learning tournament predictor using ELO rating systems, feature engineering, and ensemble methods to forecast match outcomes through Monte Carlo simulations and probabilistic modelling frameworks based on large amounts of past tennis matches.",
+      video: "/images/projectvids/Sequence03.mp4",
+      tags: ["Machine Learning", "Feature Engineering", "XGBoost", "Random Forest", "Predictive Modelling"],
+      liveUrl: "/images/projectvids/Sequence03.mp4",
+      githubUrl: "https://github.com/MJEvans3/WimbledonMLPredictor",
     },
   ]
+
+  // Create refs for each video
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([])
+  const timeoutRefs = useRef<(ReturnType<typeof setTimeout> | null)[]>([])
+
+  const handleMouseEnter = (index: number) => () => {
+    // Clear any existing timeout for this video
+    if (timeoutRefs.current[index]) {
+      clearTimeout(timeoutRefs.current[index]!)
+    }
+    
+    // Set new timeout to play the video
+    timeoutRefs.current[index] = setTimeout(() => {
+      videoRefs.current[index]?.play()
+    }, 1000)
+  }
+
+  const handleMouseLeave = (index: number) => () => {
+    // Clear any existing timeout for this video
+    if (timeoutRefs.current[index]) {
+      clearTimeout(timeoutRefs.current[index]!)
+    }
+    
+    // Pause the video
+    videoRefs.current[index]?.pause()
+  }
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -59,14 +87,33 @@ export default function Projects() {
             y: -10,
             transition: { duration: 0.3 },
           }}
+          onMouseEnter={project.video ? handleMouseEnter(index) : undefined}
+          onMouseLeave={project.video ? handleMouseLeave(index) : undefined}
         >
-          <div className="relative h-48 w-full overflow-hidden">
-            <Image
-              src={project.image || "/placeholder.svg"}
-              alt={project.title}
-              fill
-              className="object-cover transition-transform duration-700 group-hover:scale-110"
-            />
+          <div className="relative h-52 w-full overflow-hidden">
+            {project.video ? (
+              <>
+                <video
+                  ref={(el) => {
+                    videoRefs.current[index] = el;
+                  }}
+                  src={project.video}
+                  loop
+                  muted
+                  playsInline
+                  className="object-cover w-full h-full"
+                  style={{ aspectRatio: '16/9', objectFit: 'cover' }}
+                />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-300"></div>
+              </>
+            ) : (
+              <Image
+                src={project.image || "/placeholder.svg"}
+                alt={project.title}
+                fill
+                className="object-cover"
+              />
+            )}
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end">
               <div className="p-4 w-full">
                 <div className="flex gap-3 justify-end">
@@ -94,12 +141,12 @@ export default function Projects() {
               </div>
             </div>
           </div>
-          <div className="p-6 flex flex-col flex-grow">
-            <h3 className="text-xl font-semibold mb-2 text-slate-900 group-hover:text-blue-600 transition-colors duration-300">
+          <div className="p-4 flex flex-col flex-grow">
+            <h3 className="text-lg font-semibold mb-1 text-slate-900 group-hover:text-blue-600 transition-colors duration-300">
               {project.title}
             </h3>
-            <p className="text-slate-600 mb-4 flex-grow">{project.description}</p>
-            <div className="flex flex-wrap gap-2 mb-4">
+            <p className="text-slate-600 mb-2 flex-grow">{project.description}</p>
+            <div className="flex flex-wrap gap-2 mb-2">
               {project.tags.map((tag, tagIndex) => (
                 <span
                   key={tagIndex}

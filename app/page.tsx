@@ -131,7 +131,7 @@ export default function Home() {
           Born in Liverpool and raised in Istanbul, I bring a unique global perspective shaped by 13 years of international experience. This multicultural foundation, combined with my technical expertise in Python, machine learning, and financial modeling, drives my ambition to revolutionise how technology transforms capital markets.
           </p>
           <p className="text-lg md:text-l text-slate-700 mb-4">
-          With a predicted First Class degree and extensive certifications in quantitative finance, I'm actively seeking Graduate opportunities in quantitative finance and fintech for 2026, where I can apply my proven track record of delivering data-driven solutions that create measurable impact.          
+          With a predicted First Class degree and extensive certifications in finance, machine learning and data analysis, I'm actively seeking Graduate opportunities in quantitative finance, investment banking and fintech for 2026, where I can apply my proven record of delivering data-driven solutions that create measurable impact.          
           </p>
         </div>
       </section>

@@ -240,7 +240,7 @@ import React, {
             data-key={item.id}
             className="absolute box-content"
             style={{ willChange: "transform, width, height, opacity" }}
-            onClick={() => window.open(item.url, "_blank", "noopener")}
+            // onClick removed to disable opening a new tab
             onMouseEnter={(e) => handleMouseEnter(item.id, e.currentTarget)}
             onMouseLeave={(e) => handleMouseLeave(item.id, e.currentTarget)}
           >
