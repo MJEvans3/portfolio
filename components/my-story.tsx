@@ -109,7 +109,7 @@ export default function MyStory() {
     {
       year: "2022",
       title: "From Istanbul to Queen Mary",
-      description: "After graduating as Valedictorian with a 98.8% GPA from Tarabya British Schools in Istanbul, I made the bold decision to move to London alone to pursue Computer Science at Queen Mary University. Leaving behind 13 years in Turkiye, I embraced the challenge of starting fresh, determined to build my future at the intersection of technology and finance.",
+      description: "After graduating as Valedictorian with a 98.8% GPA from Tarabya British Schools in Istanbul, I made the bold decision to move to London alone to pursue Computer Science at Queen Mary University. I embraced the challenge of starting fresh, determined to build my future at the intersection of technology and finance.",
       image: "/images/my-story/IMG_8032.jpeg",
       align: "left",
     },
@@ -147,7 +147,7 @@ export default function MyStory() {
       year: "2025",
       title: "Data Analytics at Scale",
       description:
-        "Before entering my final year, TikTok offered me the opportunity to dive into live commerce analytics as a Growth Analyst. Analysing seller KPIs and developing livestream content strategies taught me how data drives user engagement at unprecedented scale. This role perfectly bridges my technical skills with commercial insight, preparing me for the dynamic world of fintech.",
+        "Before entering my final year, TikTok offered me the opportunity to dive into live commerce analytics as a Growth Analyst. Analysing seller KPIs and developing livestream content strategies taught me how data drives user engagement at unprecedented scale. This role perfectly bridges my technical skills with commercial insight, preparing me as an ultimate all round candidate.",
       image: "/images/my-story/IMG_4782.jpeg",
       align: "right",
     },

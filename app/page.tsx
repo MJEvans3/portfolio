@@ -31,11 +31,11 @@ export default function Home() {
             <div className="flex flex-col space-y-6 text-left items-start lg:pl-24 flex-1">
               <div className="space-y-4">
                 <h1 className="text-4xl md:text-6xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-blue-600">
-                  Computer Science Class of 26'
+                  Computer Science Class of '26
                 </h1>
                 <div className="space-y-2">
                   <p className="text-lg md:text-xl font-medium bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-blue-600">
-                    Live Growth Project Manager at TikTok
+                    Live Growth Product Manager at TikTok
                   </p>
                   <p className="text-base md:text-lg bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-blue-600">
                     Ex-IBM Platform Engineer, Ex-Wimbledon Data Analyst
@@ -118,20 +118,20 @@ export default function Home() {
           />
         </div>
         {/* About Me (2/5) */}
-        <div className="w-2/5 h-full flex flex-col justify-start items-start pt-8 mr-3">
+        <div className="w-2/5 h-full flex flex-col justify-start items-start pt-7 mr-3">
           <h2 className="text-4xl md:text-6xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-blue-600 mb-6">
             About Me
           </h2>
           <p className="text-lg md:text-l text-slate-700 mb-4">
-          I'm a final-year Computer Science student at Queen Mary University of London with a relentless passion for the intersection of technology and finance. Currently working as a Live Project Management Growth Analyst at TikTok, I've spent the past year building AI-powered solutions for global financial institutions during my placement at IBM, where I achieved a 55% client conversion rate across 8 MVP deliveries.          
+          I'm a final-year Computer Science student at Queen Mary University of London with a relentless passion for the intersection of technology and finance. Currently working as a Live Product Management Growth Analyst at TikTok, I've spent the past year building AI-powered solutions for global financial institutions during my placement at IBM, where I achieved a 55% client conversion rate across 8 MVP deliveries.          
           </p>
           <p className="text-lg md:text-l text-slate-700 mb-4">
           My journey spans from delivering real-time AI insights at Wimbledon's prestigious tournament to designing sophisticated financial models and trading algorithms. I've had the privilege of presenting live demos to senior executives at Barclays, NatWest, and Finastra, translating complex technical concepts into strategic business value.          </p>
           <p className="text-lg md:text-l text-slate-700 mb-4">
-          Born in Liverpool and raised in Istanbul, I bring a unique global perspective shaped by 13 years of international experience. This multicultural foundation, combined with my technical expertise in Python, machine learning, and financial modeling, drives my ambition to revolutionise how technology transforms capital markets.
+          Born in Liverpool and educated in Istanbul, I bring a unique global perspective shaped by years of international experience. This multicultural foundation, combined with my technical expertise in Python, machine learning, and financial modeling, drives my ambition to revolutionise how technology transforms capital markets.
           </p>
           <p className="text-lg md:text-l text-slate-700 mb-4">
-          With a predicted First Class degree and extensive certifications in finance, machine learning and data analysis, I'm actively seeking Graduate opportunities in quantitative finance, investment banking and fintech for 2026, where I can apply my proven record of delivering data-driven solutions that create measurable impact.          
+          With a predicted First Class degree and extensive experience from multiple global companies, along with many self-obtained certifications, I'm actively seeking Graduate opportunities for a 2026 start, where I can apply my proven record of delivering data-driven solutions that create measurable impact.          
           </p>
         </div>
       </section>

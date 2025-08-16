@@ -105,7 +105,7 @@ export default function WorkExperience() {
   const experiences: WorkExperienceItem[] = [
     {
       company: "TikTok",
-      role: "Live Project Management Growth Analyst",
+      role: "Live Product Management Growth Analyst",
       period: "August 2025 - Present",
       description: [
         "Analysing seller KPIs to deliver performance insights and recommend livestream content strategies, contributing to growth planning through data-driven reports and identifying emerging live commerce trends.",
@@ -114,8 +114,8 @@ export default function WorkExperience() {
       skills: [
         "Data Analysis",
         "Growth Strategy",
-        "KPI Analysis",
-        "Live Commerce",
+        "Product Management",
+        "Operations",
         "Strategic Planning",
       ],
     },

@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
 import { ExternalLink, Github } from "lucide-react"
-import { useRef } from "react"
+import { useRef, useState, useEffect } from "react"
 
 interface Project {
   title: string
@@ -17,12 +17,26 @@ interface Project {
 }
 
 export default function Projects() {
+  const [isMobile, setIsMobile] = useState(false)
+  const [videoStates, setVideoStates] = useState<boolean[]>([])
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.matchMedia('(hover: none) and (pointer: coarse)').matches)
+    }
+    
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
   const projects: Project[] = [
     {
       title: "Algorithmic Trading Backtest Dashboard",
       description:
       "Full stack backtesting platform for quantitative trading implementing nine algorithmic strategies I created with python, risk metrics calculation, and performance analytics including Sharpe ratios, drawdown analysis, and portfolio optimisation.",
       video: "/images/projectvids/Sequence01.mp4",
+      image: "/images/projectvids/Sequence01-poster.jpg.png",
       tags: ["Financial Risk Metrics", "Python",  "Next.js","Statistical Modelling", "React"],
       liveUrl: "/images/projectvids/Sequence01.mp4",
       githubUrl: "https://github.com/MJEvans3/BacktestApp",
@@ -32,6 +46,7 @@ export default function Projects() {
       description:
       "Full stack advanced derivatives pricing model implementing Black-Scholes framework with Greeks calculation, implied volatility analysis, risk surface visualisation, and profit-loss scenario modeling for options trading with AI chat feature.",
       video: "/images/projectvids/Sequence02.mp4",
+      image: "/images/projectvids/Sequence02-poster.jpg.png",
       tags: ["Options Pricing", "Risk Management","NumPy","Financial Mathematics", "Plotly", "Streamlit"],
       liveUrl: "/images/projectvids/Sequence02.mp4",
       githubUrl: "https://github.com/MJEvans3/Black-Scholes-Option-Pricer",
@@ -41,17 +56,24 @@ export default function Projects() {
       description:
       "Machine learning tournament predictor using ELO rating systems, feature engineering, and ensemble methods to forecast match outcomes through Monte Carlo simulations and probabilistic modelling frameworks based on large amounts of past tennis matches.",
       video: "/images/projectvids/Sequence03.mp4",
+      image: "/images/projectvids/Sequence03-poster.jpg.png",
       tags: ["Machine Learning", "Feature Engineering", "XGBoost", "Random Forest", "Predictive Modelling"],
       liveUrl: "/images/projectvids/Sequence03.mp4",
       githubUrl: "https://github.com/MJEvans3/WimbledonMLPredictor",
     },
   ]
 
+  useEffect(() => {
+    setVideoStates(new Array(projects.length).fill(false))
+  }, [])
+
   // Create refs for each video
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([])
   const timeoutRefs = useRef<(ReturnType<typeof setTimeout> | null)[]>([])
 
   const handleMouseEnter = (index: number) => () => {
+    if (isMobile) return
+    
     // Clear any existing timeout for this video
     if (timeoutRefs.current[index]) {
       clearTimeout(timeoutRefs.current[index]!)
@@ -64,6 +86,8 @@ export default function Projects() {
   }
 
   const handleMouseLeave = (index: number) => () => {
+    if (isMobile) return
+    
     // Clear any existing timeout for this video
     if (timeoutRefs.current[index]) {
       clearTimeout(timeoutRefs.current[index]!)
@@ -71,6 +95,25 @@ export default function Projects() {
     
     // Pause the video
     videoRefs.current[index]?.pause()
+  }
+
+  const handleMobileClick = (index: number) => () => {
+    if (!isMobile) return
+    
+    const video = videoRefs.current[index]
+    const isPlaying = videoStates[index]
+    
+    if (isPlaying) {
+      video?.pause()
+    } else {
+      video?.play()
+    }
+    
+    setVideoStates(prev => {
+      const newStates = [...prev]
+      newStates[index] = !isPlaying
+      return newStates
+    })
   }
 
   return (
@@ -89,6 +132,7 @@ export default function Projects() {
           }}
           onMouseEnter={project.video ? handleMouseEnter(index) : undefined}
           onMouseLeave={project.video ? handleMouseLeave(index) : undefined}
+          onClick={project.video && isMobile ? handleMobileClick(index) : undefined}
         >
           <div className="relative h-52 w-full overflow-hidden">
             {project.video ? (
@@ -98,13 +142,48 @@ export default function Projects() {
                     videoRefs.current[index] = el;
                   }}
                   src={project.video}
+                  poster={project.image}
                   loop
                   muted
                   playsInline
+                  preload={isMobile ? "metadata" : "auto"}
                   className="object-cover w-full h-full"
                   style={{ aspectRatio: '16/9', objectFit: 'cover' }}
+                  onLoadedMetadata={() => {
+                    if (isMobile) {
+                      const video = videoRefs.current[index]
+                      if (video) {
+                        video.currentTime = 0.1
+                      }
+                    }
+                  }}
+                  onPlay={() => {
+                    if (isMobile) {
+                      setVideoStates(prev => {
+                        const newStates = [...prev]
+                        newStates[index] = true
+                        return newStates
+                      })
+                    }
+                  }}
+                  onPause={() => {
+                    if (isMobile) {
+                      setVideoStates(prev => {
+                        const newStates = [...prev]
+                        newStates[index] = false
+                        return newStates
+                      })
+                    }
+                  }}
                 />
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-300"></div>
+                <div className={`absolute inset-0 bg-black/40 ${isMobile ? '' : 'group-hover:bg-transparent'} transition-colors duration-300`}></div>
+                {isMobile && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className={`w-16 h-16 rounded-full bg-white/80 flex items-center justify-center transition-opacity duration-300 ${videoStates[index] ? 'opacity-0' : 'opacity-100'}`}>
+                      <div className="w-0 h-0 border-l-[12px] border-l-black border-y-[8px] border-y-transparent ml-1"></div>
+                    </div>
+                  </div>
+                )}
               </>
             ) : (
               <Image
